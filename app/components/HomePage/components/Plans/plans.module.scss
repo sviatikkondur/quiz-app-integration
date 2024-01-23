@@ -8,6 +8,8 @@
   box-sizing: border-box;
   border: 2px solid transparent;
   border-radius: $corner-md;
+
+  cursor: pointer;
 }
 
 .planOption {
@@ -18,7 +20,7 @@
 
   background-color: $Color-UI-100;
   border-radius: $corner-md;
-  
+
   padding: $space-lg;
 }
 
@@ -40,13 +42,13 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 24px; /* 133.333% */
+
+  cursor: pointer;
 }
 
 .popularTag {
   background: $color-ui-600;
-
-  border-radius: 6px 6px 0 0;
-  
+  border-radius: $corner-md $corner-md 0 0;
   padding-block: $space-xs;
 
   color: #fff;
@@ -55,12 +57,20 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 16px; /* 133.333% */
+  text-transform: uppercase;
+}
+
+.popularTagSelected {
+  background-color: $Color-Brand-Primary;
+  border-radius: 4px 4px 0 0;
 }
 
 .icon {
   width: 24px;
   height: 24px;
   background-image: url('../../../../../public/icons/Radio.svg');
+
+  cursor: pointer;
 }
 
 .optionInput {
@@ -70,6 +80,7 @@
 
 .selectedIcon {
   background-image: url('../../../../../public/icons/Radio-Checked.svg');
+  cursor: pointer;
 }
 
 .priceTag {
@@ -77,10 +88,8 @@
   gap: $space-xs;
 
   background: $Color-UI-200;
-
   border-radius: $Corner-sm;
   border: 1px solid $Color-UI-200;
-
   padding: $space-sm;
 }
 

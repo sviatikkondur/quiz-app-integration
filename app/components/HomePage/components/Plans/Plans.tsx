@@ -25,19 +25,26 @@ export const Plans: React.FC<Props> = ({
             className={classNames(styles.optionWrapper, {
               [styles.planOptionSelected]: selectedPlan === plan.id,
             })}
+            onClick={() => handlePlanChange(plan.id)}
           >
             {popularPlanId === plan.id && (
-              <div className={styles.popularTag}>Most Popular</div>
+              <div
+                className={classNames(styles.popularTag, {
+                  [styles.popularTagSelected]: selectedPlan === plan.id,
+                })}
+              >
+                Most Popular
+              </div>
             )}
             <div
               className={classNames(styles.planOption, {
                 [styles.planOptionPopular]: popularPlanId === plan.id,
               })}
-              onClick={() => handlePlanChange(plan.id)}
             >
               <label
                 className={styles.optionLabel}
                 htmlFor={String(plan.id)}
+                onClick={(e) => e.preventDefault()}
               >
                 <input
                   id={String(plan.id)}
@@ -46,6 +53,10 @@ export const Plans: React.FC<Props> = ({
                   value={`${plan.duration}-Month Plan`}
                   className={styles.optionInput}
                   checked={selectedPlan === plan.id}
+                  onChange={(e) => {
+                    e.target.focus({ preventScroll: true });
+                    handlePlanChange(plan.id);
+                  }}
                 />
 
                 <div

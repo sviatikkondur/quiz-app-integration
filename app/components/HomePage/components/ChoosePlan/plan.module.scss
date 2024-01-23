@@ -1,5 +1,31 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
 .subtitle {
   @include subtitle;
 }
 
+.cta {
+  @include CTA;
+}
 
+.planDetails {
+  color: $Color-UI-400;
+  text-align: center;
+  font-family: 'Jakarta';
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px; /* 160% */
+}
+
+.subscription {
+  color: $color-ui-600;
+  font-family: 'Jakarta';
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+}

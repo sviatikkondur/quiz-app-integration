@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: $space-lg;
+  margin-top: 15px;
+}
+
+.logo {
+  color: $color-ui-600;
+  text-align: center;
+  font-family: Lora;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.iconButton {
+  background-color: transparent;
+  border: none;
+  padding: $space-sm;
+  cursor: pointer;
+
+  &:active {
+    border-radius: $corner-md;
+    background-color: $color-ui-100;
+  }
+}

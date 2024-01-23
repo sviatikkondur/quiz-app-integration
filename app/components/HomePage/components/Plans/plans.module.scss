@@ -1,0 +1,101 @@
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.optionWrapper {
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: $corner-md;
+}
+
+.planOption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $Color-UI-100;
+  border-radius: $corner-md;
+  
+  padding: $space-lg;
+}
+
+.planOptionSelected {
+  border: 2px solid $Color-Brand-Primary;
+}
+
+.planOptionPopular {
+  border-radius: 0 0 $corner-md $corner-md;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+
+  color: $color-ui-600;
+  font-family: 'Jakarta';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+}
+
+.popularTag {
+  background: $color-ui-600;
+
+  border-radius: 6px 6px 0 0;
+  
+  padding-block: $space-xs;
+
+  color: #fff;
+  text-align: center;
+  font-family: 'Jakarta';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-image: url('../../../../../public/icons/Radio.svg');
+}
+
+.optionInput {
+  opacity: 0;
+  position: absolute;
+}
+
+.selectedIcon {
+  background-image: url('../../../../../public/icons/Radio-Checked.svg');
+}
+
+.priceTag {
+  display: flex;
+  gap: $space-xs;
+
+  background: $Color-UI-200;
+
+  border-radius: $Corner-sm;
+  border: 1px solid $Color-UI-200;
+
+  padding: $space-sm;
+}
+
+.dollar {
+  color: $color-ui-600;
+  font-family: 'Jakarta';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.price {
+  color: $color-ui-600;
+  font-family: 'Jakarta';
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 40px; /* 83.333% */
+}

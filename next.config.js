@@ -5,6 +5,6 @@ const path = require('path');
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'app', 'styles')],
-    prependData: `@import "variables.scss";`
+    prependData: `@import "prependStyles.scss";`
   },
 };

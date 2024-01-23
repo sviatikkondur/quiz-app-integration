@@ -1,0 +1,10 @@
+@mixin subtitle {
+  color: #000;
+  text-align: center;
+
+  /* Serif/Subtitle */
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}

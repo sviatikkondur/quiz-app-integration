@@ -1,3 +1,8 @@
+.wrapper {
+  position: relative;
+  padding-inline: $space-xl;
+}
+
 .progressBar {
   height: 24px;
   width: 100%;
@@ -15,4 +20,14 @@
     border-radius: 3px;
     background-color: $Color-Brand-Primary;
   }
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: Lora;
+  font-weight: 500;
 }

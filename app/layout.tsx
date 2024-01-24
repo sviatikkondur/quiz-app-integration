@@ -2,6 +2,7 @@ import './styles/main.scss';
 import styles from './layout.module.scss';
 import type { Metadata } from 'next';
 import { Header } from './components/Header/Header';
+import { ProgressBar } from './components/ProgressBar/ProgressBar';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={styles.body}>
         {<Header />}
+        {<ProgressBar />}
         {children}
       </body>
     </html>

@@ -9,7 +9,6 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <ProgressBar />
       {quizStatus === QuizStatus.Finished && <HomePage />}
       {quizStatus !== QuizStatus.Finished && <Quiz />}
     </main>

@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.list {
+  @include list;
+}
+
+.listItem {
+  @include listItemLayout;
+  align-items: center;
+}
+
+.listItem:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.percentage {
+  min-width: 72px;
+
+  color: #000;
+  text-align: right;
+  font-family: Lora;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.content {
+  color: #000;
+  font-family: 'Jakarta';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}

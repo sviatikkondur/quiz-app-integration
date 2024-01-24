@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { ChoosePlan } from './components/ChoosePlan/ChoosePlan';
-import { Benefits } from './components/WhatYouGet/Benefits';
+import { Benefits } from './components/Benefits/Benefits';
+import { Stats } from './components/Stats/Stats';
 
 export const HomePage = () => {
   const [selectedPlan, setSelectedPlan] = useState<null | number>(null);
@@ -19,7 +20,8 @@ export const HomePage = () => {
       />
 
       <Benefits />
-      
+
+      <Stats />
       {/* <ChoosePlan
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}

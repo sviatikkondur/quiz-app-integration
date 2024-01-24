@@ -1,0 +1,83 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+}
+
+.title {
+  @include title;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-sm;
+  padding: $space-sm $space-md;
+
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: $Color-UI-100;
+}
+
+.label:focus-within {
+  border: 2px solid var(--Color-UI-600, #222b38);
+}
+
+.input {
+  align-self: stretch;
+
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: transparent;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px $Color-UI-100 inset !important;
+}
+
+.labelName {
+  color: $Color-Brand-Primary;
+  font-family: 'Jakarta';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+}
+
+.errorLabel {
+  border: 2px solid red;
+}
+
+.error {
+  position: absolute;
+  bottom: -($space-sm * 3);
+  left: 0;
+
+  color: #f00;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.CTA {
+  @include CTA;
+}

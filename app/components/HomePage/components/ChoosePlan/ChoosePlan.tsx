@@ -30,7 +30,12 @@ export const ChoosePlan: React.FC<Props> = ({
           selectedPlan={selectedPlan}
         />
 
-        <button className={styles.cta}>Get my plan</button>
+        <button
+          className={styles.cta}
+          type='submit'
+        >
+          Get my plan
+        </button>
 
         <p className={styles.planDetails}>
           You are enrolling in a 3-monthly subscription to

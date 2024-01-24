@@ -1,0 +1,59 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.review {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+
+  padding: $space-md;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: $space-sm;
+}
+
+.reviewDetails {
+  align-self: stretch;
+}
+
+.reviewAuthor {
+  color: #000;
+  font-family: 'Jakarta';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.reviewDate {
+  color: rgba(0, 0, 0, 0.48);
+  font-family: 'Jakarta';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.message {
+  color: #000;
+  font-family: 'Jakarta';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}

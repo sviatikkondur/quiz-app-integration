@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { ChoosePlan } from './components/ChoosePlan/ChoosePlan';
 import { Benefits } from './components/Benefits/Benefits';
 import { Stats } from './components/Stats/Stats';
+import { Reviews } from './components/Reviews/Reviews';
+import styles from './home.module.scss';
 
 export const HomePage = () => {
   const [selectedPlan, setSelectedPlan] = useState<null | number>(null);
@@ -13,7 +15,7 @@ export const HomePage = () => {
   };
 
   return (
-    <>
+    <section className={styles.section}>
       <ChoosePlan
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}
@@ -22,10 +24,13 @@ export const HomePage = () => {
       <Benefits />
 
       <Stats />
-      {/* <ChoosePlan
+
+      <Reviews />
+
+      <ChoosePlan
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}
-      /> */}
-    </>
+      />
+    </section>
   );
 };

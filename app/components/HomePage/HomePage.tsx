@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChoosePlan } from './components/ChoosePlan/ChoosePlan';
+import { Benefits } from './components/WhatYouGet/Benefits';
 
 export const HomePage = () => {
   const [selectedPlan, setSelectedPlan] = useState<null | number>(null);
@@ -16,10 +17,13 @@ export const HomePage = () => {
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}
       />
-      <ChoosePlan
+
+      <Benefits />
+      
+      {/* <ChoosePlan
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}
-      />
+      /> */}
     </>
   );
 };

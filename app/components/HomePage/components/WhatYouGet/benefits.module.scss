@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.list {
+  border-radius: $corner-md;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+
+  box-shadow: 0px 2px 6px -2px rgba(29, 41, 52, 0.24);
+}
+
+.listItem {
+  display: flex;
+  padding: $space-md $space-xl;
+  align-items: flex-start;
+  gap: $space-md;
+  align-self: stretch;
+
+  color: #000;
+  font-family: 'Jakarta', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.listItem:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}

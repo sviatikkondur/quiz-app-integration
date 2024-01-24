@@ -63,3 +63,9 @@
   gap: $space-md;
   align-self: stretch;
 }
+
+@mixin onTablet {
+  @media (min-height: 722px) and (min-width: 390px) {
+    @content;
+  }
+}

@@ -4,6 +4,10 @@
   align-items: center;
 
   padding-inline: $space-lg;
+
+  @include onTablet {
+    margin-top: 47px;
+  }
 }
 
 .logo {

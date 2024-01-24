@@ -1,0 +1,28 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $space-xl;
+}
+
+.title {
+  @include title;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+}
+
+.diagram {
+  height: 355px;
+  align-self: stretch;
+
+  background-image: url('./icons/diagram.svg');
+  background-repeat: no-repeat;
+}
+
+.CTA {
+  @include CTA;
+}

@@ -3,6 +3,7 @@ import styles from './layout.module.scss';
 import type { Metadata } from 'next';
 import { Header } from './components/Header/Header';
 import { ProgressBar } from './components/ProgressBar/ProgressBar';
+import { PhoneHeader } from './components/PhoneHeader/PhoneHeader';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className={styles.html}>
       <body className={styles.body}>
+        {<PhoneHeader />}
         {<Header />}
         {<ProgressBar />}
         {children}

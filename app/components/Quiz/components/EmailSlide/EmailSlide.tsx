@@ -5,8 +5,18 @@ import styles from './email.module.scss';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import classNames from 'classnames';
+import { useAppDispatch } from '@/app/hooks/useTypedSelector';
+import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
+import { QuizStatus } from '@/app/types/TQuiz';
 
-export const EmailSlide = () => {
+type Props = {
+  email: string | null;
+  handleEmailChange: (email: string) => void;
+};
+
+export const EmailSlide: React.FC<Props> = ({ email, handleEmailChange }) => {
+  const dispatch = useAppDispatch();
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -14,8 +24,9 @@ export const EmailSlide = () => {
     validationSchema: Yup.object({
       email: Yup.string().email('Invalid email address').required('Required'),
     }),
-    onSubmit: (values) => {
-      console.log('Form submitted with values:', values);
+    onSubmit: () => {
+      console.log('Form submitted with values:', email);
+      dispatch(changeStatus(QuizStatus.Diagram));
     },
   });
 
@@ -42,7 +53,10 @@ export const EmailSlide = () => {
             type='email'
             id='email'
             name='email'
-            onChange={formik.handleChange}
+            onChange={(e) => {
+              formik.handleChange(e);
+              handleEmailChange(e.target.value);
+            }}
             onBlur={formik.handleBlur}
             value={formik.values.email}
             className={styles.input}

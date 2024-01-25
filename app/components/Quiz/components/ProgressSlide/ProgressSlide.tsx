@@ -14,8 +14,6 @@ export const ProgressSlide = () => {
     dispatch(changeStatus(QuizStatus.Finished));
   };
 
-  console.log(status);
-
   return (
     <section className={styles.section}>
       <div className={styles.header}>

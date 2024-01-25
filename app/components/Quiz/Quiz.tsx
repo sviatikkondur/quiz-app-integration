@@ -9,7 +9,7 @@ import { QuizStatus } from '@/app/types/TQuiz';
 
 export const Quiz = () => {
   const [email, setEmail] = useState<string | null>(null);
-  const { status } = useAppSelector(state => state.quiz);
+  const { status } = useAppSelector((state) => state.quiz);
 
   const handleEmailChange = (email: string) => {
     setEmail(email);
@@ -18,7 +18,9 @@ export const Quiz = () => {
   return (
     <>
       {status === QuizStatus.Start && <CraftingSlide />}
-      {status === QuizStatus.Email && <EmailSlide />}
+      {status === QuizStatus.Email && (
+        <EmailSlide handleEmailChange={handleEmailChange} email={email}/>
+      )}
       {status === QuizStatus.Diagram && <ProgressSlide />}
     </>
   );

@@ -1,7 +1,7 @@
-import goals from '../../components/Quiz/components/CraftingSlide/icons/goals.svg';
-import answers from '../../components/Quiz/components/CraftingSlide/icons/answers.svg';
-import picking from '../../components/Quiz/components/CraftingSlide/icons/picking.svg';
-import finalizing from '../../components/Quiz/components/CraftingSlide/icons/finalizing.svg';
+import goals from './icons/goals.svg';
+import answers from './icons/answers.svg';
+import picking from './icons/picking.svg';
+import finalizing from './icons/finalizing.svg';
 
 export const steps = [
   { id: 0, message: 'Aligning with your goals', icon: goals },

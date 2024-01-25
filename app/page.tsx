@@ -17,8 +17,6 @@ export default function Home() {
     }
   }, [status, router]);
 
-  console.log(status);
-
   return (
     <main className={styles.main}>
       {status !== QuizStatus.Finished && <Quiz />}

@@ -50,7 +50,7 @@ export const CraftingSlide = () => {
 
     setTimeout(() => {
       dispatch(changeStatus(QuizStatus.Email));
-    }, 2500);
+    }, 2000);
   }, [dispatch]);
 
   return (

@@ -16,11 +16,8 @@
 }
 
 .diagram {
-  height: 355px;
-  align-self: stretch;
-
-  background-image: url('./icons/diagram.svg');
-  background-repeat: no-repeat;
+  width: 100%;
+  object-fit: contain;
 }
 
 .CTA {

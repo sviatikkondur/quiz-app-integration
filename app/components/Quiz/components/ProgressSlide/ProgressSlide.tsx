@@ -27,12 +27,11 @@ export const ProgressSlide: React.FC<Props> = ({ email }) => {
         <h2 className={styles.title}>
           See your Spiritual Growth progress by Sep 17, 2024
         </h2>
-        <div>
-          <Image
-            src={diagram}
-            alt='diagram'
-          />
-        </div>
+        <Image
+          className={styles.diagram}
+          src={diagram}
+          alt='diagram'
+        />
       </div>
 
       <button

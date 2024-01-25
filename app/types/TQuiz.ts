@@ -1,6 +1,6 @@
 export enum QuizStatus {
-  Start = 'start',
-  Email = 'email',
-  Diagram = 'diagram',
-  Finished = 'finished',
+  Start = 0,
+  Email = 1,
+  Diagram = 2,
+  Finished = 'done',
 }

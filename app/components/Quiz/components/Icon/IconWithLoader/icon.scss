@@ -1,0 +1,29 @@
+#loading-bar-spinner.spinner {
+  z-index: 19 !important;
+  animation: loading-bar-spinner 1s linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+  width: 21px;
+  height: 21px;
+  border: solid 2px transparent;
+  border-top-color: $color-ui-600 !important;
+  border-left-color: $color-ui-600 !important;
+  border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.empty-box {
+  width: 24px;
+  height: 24px;
+}

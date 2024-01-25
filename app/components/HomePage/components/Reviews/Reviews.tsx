@@ -1,4 +1,4 @@
-import { reviews } from '@/app/fakeApi/reviews';
+import { reviews } from '@/app/utils/data/reviews';
 import React from 'react';
 import styles from './reviews.module.scss';
 import { formatDate } from '@/app/utils/formatDate';

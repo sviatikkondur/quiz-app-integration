@@ -5,18 +5,21 @@ import styles from './page.module.scss';
 import { HomePage } from './components/HomePage/HomePage';
 import { QuizStatus } from './types/TQuiz';
 import { useRouter } from 'next/navigation';
+import { useAppSelector } from './hooks/useTypedSelector';
 
 export default function Home() {
+  const { status } = useAppSelector((state) => state.quiz);
   const router = useRouter();
-  const quizStatus: QuizStatus | null = QuizStatus.Start;
 
   useEffect(() => {
-    if (quizStatus !== null) {
+    if (status === QuizStatus.Start) {
       router.push('/quiz');
     }
-  }, [quizStatus, router]);
+  }, [status, router]);
 
   return (
-    <main className={styles.main}>{quizStatus === null && <HomePage />}</main>
+    <main className={styles.main}>
+      {status === QuizStatus.Finished && <HomePage />}
+    </main>
   );
 }

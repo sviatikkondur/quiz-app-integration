@@ -1,6 +1,7 @@
 import './styles/main.scss';
 import styles from './layout.module.scss';
 import type { Metadata } from 'next';
+import { Providers } from './GlobalRedux/provider';
 import { Header } from './components/Header/Header';
 import { ProgressBar } from './components/ProgressBar/ProgressBar';
 import { PhoneHeader } from './components/PhoneHeader/PhoneHeader';
@@ -16,12 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={styles.html}>
+    <html
+      lang='en'
+      className={styles.html}
+    >
       <body className={styles.body}>
-        {<PhoneHeader />}
-        {<Header />}
-        {<ProgressBar />}
-        {children}
+        <Providers>
+          {<PhoneHeader />}
+          {<Header />}
+          {<ProgressBar />}
+          {children}
+        </Providers>
       </body>
     </html>
   );

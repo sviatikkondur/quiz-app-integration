@@ -1,14 +1,59 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './crafting.module.scss';
 import Image from 'next/image';
-import goals from './icons/goals.svg';
-import answers from './icons/answers.svg';
-import picking from './icons/picking.svg';
-import finalizing from './icons/finalizing.svg';
+import { useAppDispatch } from '@/app/hooks/useTypedSelector';
+import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
+import { QuizStatus } from '@/app/types/TQuiz';
+import { Icon } from '../Icon/Icon';
+import { steps } from '@/app/utils/data/steps';
 
 export const CraftingSlide = () => {
+  const [iconsStatus, setIconsStatus] = useState<{
+    [key: number]: { id: number; isShowing: boolean };
+  }>({
+    0: { id: 0, isShowing: false },
+    1: { id: 1, isShowing: false },
+    2: { id: 2, isShowing: false },
+    3: { id: 3, isShowing: false },
+  });
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    // used timeouts to imitate async actions (requests)
+
+    setIconsStatus((prev) => ({
+      ...prev,
+      0: { ...prev[0], isShowing: true },
+    }));
+
+    setTimeout(() => {
+      setIconsStatus((prev) => ({
+        ...prev,
+        1: { ...prev[1], isShowing: true },
+      }));
+    }, 200);
+
+    setTimeout(() => {
+      setIconsStatus((prev) => ({
+        ...prev,
+        2: { ...prev[2], isShowing: true },
+      }));
+    }, 400);
+
+    setTimeout(() => {
+      setIconsStatus((prev) => ({
+        ...prev,
+        3: { ...prev[3], isShowing: true },
+      }));
+    }, 600);
+
+    setTimeout(() => {
+      dispatch(changeStatus(QuizStatus.Email));
+    }, 2000);
+  }, [dispatch]);
+
   return (
     <section className={styles.section}>
       <h1 className={styles.title}>
@@ -20,38 +65,18 @@ export const CraftingSlide = () => {
       </div>
 
       <ul className={styles.list}>
-        <li className={styles.listItem}>
-          <Image
-            src={goals}
-            alt='icon'
-          />
-          <p className={styles.listItemText}>Aligning with your goals</p>
-        </li>
-        <li className={styles.listItem}>
-          <Image
-            src={answers}
-            alt='icon'
-          />
-          <p className={styles.listItemText}>Reviewing your answers</p>
-        </li>
-        <li className={styles.listItem}>
-          <Image
-            src={picking}
-            alt='icon'
-          />
-          <p className={styles.listItemText}>
-            Picking Bible verses and prayers for you
-          </p>
-        </li>
-        <li className={styles.listItem}>
-          <Image
-            src={finalizing}
-            alt='icon'
-          />
-          <p className={styles.listItemText}>
-            Finalizing your personalized plan
-          </p>
-        </li>
+        {steps.map((step) => (
+          <li
+            key={step.id}
+            className={styles.listItem}
+          >
+            <Icon
+              icon={step.icon}
+              isIconShown={iconsStatus[step.id].isShowing}
+            />
+            <p className={styles.listItemText}>{step.message}</p>
+          </li>
+        ))}
       </ul>
     </section>
   );

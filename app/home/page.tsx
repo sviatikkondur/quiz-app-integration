@@ -2,10 +2,10 @@
 
 import { useRouter } from 'next/navigation';
 import styles from './page.module.scss';
-import { QuizStatus } from '../../types/TQuiz';
 import { useEffect } from 'react';
-import { useAppSelector } from '@/app/hooks/useTypedSelector';
 import { HomePage } from '@/app/components/HomePage/HomePage';
+import { useAppSelector } from '@/hooks/useTypedSelector';
+import { QuizStatus } from '@/types/TQuiz';
 
 export default function Home() {
   const { status } = useAppSelector((state) => state.quiz);

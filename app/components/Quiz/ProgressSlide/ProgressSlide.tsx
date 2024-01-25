@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './progress.module.scss';
 import Image from 'next/image';
 import diagram from './icons/diagram.svg';
-import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
-import { QuizStatus } from '@/app/types/TQuiz';
-import { useAppDispatch, useAppSelector } from '@/app/hooks/useTypedSelector';
-import { sendQuizResults } from '@/app/utils/api/api';
+import { QuizStatus } from '@/types/TQuiz';
+import { useAppDispatch, useAppSelector } from '@/hooks/useTypedSelector';
+import { sendQuizResults } from '@/utils/api/api';
+import { changeStatus } from '@/store/features/quiz/quizSlice';
 
 type Props = {
   email: string;

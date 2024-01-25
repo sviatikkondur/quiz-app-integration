@@ -1,6 +1,6 @@
 export const sendQuizResults = async (email: string) => {
   try {
-    const response = await fetch('api/quiz-results', {
+    const response = await fetch('api/quiz', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

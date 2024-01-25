@@ -1,6 +1,6 @@
 'use client';
 
-import { QuizStatus } from '@/app/types/TQuiz';
+import { QuizStatus } from '@/types/TQuiz';
 import { createSlice } from '@reduxjs/toolkit';
 
 export interface QuizSlice {
@@ -17,7 +17,7 @@ export const quizSlice = createSlice({
   reducers: {
     changeStatus: (state, action) => {
       state.status = action.payload;
-    }
+    },
   },
 });
 

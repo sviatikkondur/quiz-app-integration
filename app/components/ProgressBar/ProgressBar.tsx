@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './progress.module.scss';
-import { useAppSelector } from '@/app/hooks/useTypedSelector';
-import { QuizStatus } from '@/app/types/TQuiz';
+import { QuizStatus } from '@/types/TQuiz';
+import { useAppSelector } from '@/hooks/useTypedSelector';
 
 export const ProgressBar = () => {
   const { status } = useAppSelector((state) => state.quiz);

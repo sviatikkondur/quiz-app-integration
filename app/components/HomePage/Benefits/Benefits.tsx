@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './benefits.module.scss';
 import Image from 'next/image';
 import checkIcon from '../../../../public/icons/Check.svg';
-import { benefits } from '@/app/utils/data/benefits';
+import { benefits } from '@/utils/data/benefits';
 
 export const Benefits = () => {
   return (

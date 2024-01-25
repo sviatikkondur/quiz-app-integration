@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useAppSelector } from '@/app/hooks/useTypedSelector';
-import { QuizStatus } from '@/app/types/TQuiz';
+import { QuizStatus } from '@/types/TQuiz';
 import { CraftingSlide } from './CraftingSlide/CraftingSlide';
 import { EmailSlide } from './EmailSlide/EmailSlide';
 import { ProgressSlide } from './ProgressSlide/ProgressSlide';
+import { useAppSelector } from '@/hooks/useTypedSelector';
 
 export const Quiz = () => {
   const [email, setEmail] = useState<string>('');

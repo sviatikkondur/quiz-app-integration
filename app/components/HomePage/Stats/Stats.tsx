@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './stats.module.scss';
-import { stats } from '@/app/utils/data/stats';
+import { stats } from '@/utils/data/stats';
 
 export const Stats = () => {
   return (

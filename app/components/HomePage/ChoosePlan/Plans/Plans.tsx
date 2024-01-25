@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import styles from './plans.module.scss';
-import { TPlan } from '@/app/types/TPlan';
+import { TPlan } from '@/types/TPlan';
 
 type Props = {
   plans: TPlan[];

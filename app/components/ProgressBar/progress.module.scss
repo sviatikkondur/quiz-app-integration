@@ -22,6 +22,10 @@
   }
 }
 
+.progressBar::-webkit-progress-value {
+  transition: width 0.5s linear;
+}
+
 .percentage {
   position: absolute;
   top: 50%;

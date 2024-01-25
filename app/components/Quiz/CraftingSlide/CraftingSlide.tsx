@@ -2,17 +2,17 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './crafting.module.scss';
-import { useAppDispatch } from '@/app/hooks/useTypedSelector';
-import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
-import { QuizStatus } from '@/app/types/TQuiz';
-import { steps } from '@/app/utils/data/steps';
+import { QuizStatus } from '@/types/TQuiz';
 import { Icon } from './Icon/Icon';
+import { changeStatus } from '@/store/features/quiz/quizSlice';
+import { steps } from '@/utils/data/steps';
+import { useAppDispatch } from '@/hooks/useTypedSelector';
 
 export const CraftingSlide = () => {
   const [iconsStatus, setIconsStatus] = useState<{
     [key: number]: { id: number; isShowing: boolean };
   }>({
-    0: { id: 0, isShowing: false },
+    0: { id: 0, isShowing: true },
     1: { id: 1, isShowing: false },
     2: { id: 2, isShowing: false },
     3: { id: 3, isShowing: false },
@@ -21,11 +21,6 @@ export const CraftingSlide = () => {
 
   useEffect(() => {
     // used timeouts to imitate async actions (requests)
-
-    setIconsStatus((prev) => ({
-      ...prev,
-      0: { ...prev[0], isShowing: true },
-    }));
 
     setTimeout(() => {
       setIconsStatus((prev) => ({
@@ -50,7 +45,7 @@ export const CraftingSlide = () => {
 
     setTimeout(() => {
       dispatch(changeStatus(QuizStatus.Email));
-    }, 2000);
+    }, 3000);
   }, [dispatch]);
 
   return (

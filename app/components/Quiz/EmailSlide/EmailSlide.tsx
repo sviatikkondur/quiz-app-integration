@@ -5,9 +5,9 @@ import styles from './email.module.scss';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import classNames from 'classnames';
-import { useAppDispatch } from '@/app/hooks/useTypedSelector';
-import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
-import { QuizStatus } from '@/app/types/TQuiz';
+import { QuizStatus } from '@/types/TQuiz';
+import { useAppDispatch } from '@/hooks/useTypedSelector';
+import { changeStatus } from '@/store/features/quiz/quizSlice';
 
 type Props = {
   handleEmailChange: (email: string) => void;

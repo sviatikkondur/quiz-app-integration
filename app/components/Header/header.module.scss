@@ -20,6 +20,8 @@
 }
 
 .iconButton {
+  height: 24px;
+  box-sizing: content-box;
   background-color: transparent;
   border: none;
   padding: $space-sm;

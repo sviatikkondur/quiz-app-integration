@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './progress.module.scss';
 import { QuizStatus } from '@/types/TQuiz';
 import { useAppSelector } from '@/hooks/useTypedSelector';
+import classNames from 'classnames';
 
 export const ProgressBar = () => {
   const { status } = useAppSelector((state) => state.quiz);
@@ -13,7 +14,11 @@ export const ProgressBar = () => {
 
   return (
     <div className={styles.wrapper}>
-      <p className={styles.percentage}>{`${progressValue}%`}</p>
+      <p
+        className={classNames(styles.percentage, {
+          [styles.white]: progressValue >= 50,
+        })}
+      >{`${progressValue}%`}</p>
       <progress
         className={styles.progressBar}
         value={progressValue}

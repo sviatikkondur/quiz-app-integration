@@ -21,7 +21,6 @@ export const CraftingSlide = () => {
 
   useEffect(() => {
     // used timeouts to imitate async actions (requests)
-
     setTimeout(() => {
       setIconsStatus((prev) => ({
         ...prev,
@@ -45,7 +44,7 @@ export const CraftingSlide = () => {
 
     setTimeout(() => {
       dispatch(changeStatus(QuizStatus.Email));
-    }, 3000);
+    }, 2500);
   }, [dispatch]);
 
   return (

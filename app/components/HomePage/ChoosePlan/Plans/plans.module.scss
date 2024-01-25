@@ -11,7 +11,7 @@
 
   cursor: pointer;
 
-  transition: border-color 0.3s linear;
+  transition: border-color 0.4s linear;
 }
 
 .planOption {
@@ -61,7 +61,7 @@
   line-height: 16px; /* 133.333% */
   text-transform: uppercase;
 
-  transition: background-color 1s;
+  transition: background-color 0.8s linear, border-radius 0.8s linear;
 }
 
 .popularTagSelected {
@@ -75,6 +75,8 @@
   background-image: url('../../../../../public/icons/Radio.svg');
 
   cursor: pointer;
+
+  transition: background-image 0.4s linear;
 }
 
 .optionInput {

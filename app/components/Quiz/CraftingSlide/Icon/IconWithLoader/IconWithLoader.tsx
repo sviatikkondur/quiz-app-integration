@@ -14,7 +14,7 @@ export const IconWithLoader: React.FC<Props> = ({ icon }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 400);
+    }, 500);
   }, []);
 
   return (

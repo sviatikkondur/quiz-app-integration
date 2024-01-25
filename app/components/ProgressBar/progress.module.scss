@@ -23,7 +23,7 @@
 }
 
 .progressBar::-webkit-progress-value {
-  transition: width 0.5s linear;
+  transition: width 0.2s linear;
 }
 
 .percentage {
@@ -34,4 +34,8 @@
 
   font-family: Lora;
   font-weight: 500;
+}
+
+.white {
+  color: white;
 }

@@ -26,3 +26,12 @@
     border-radius: $Corner-lg;
   }
 }
+
+.body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  outline: 1px solid slategrey;
+}

@@ -8,7 +8,7 @@ import { useAppSelector } from '@/app/hooks/useTypedSelector';
 import { QuizStatus } from '@/app/types/TQuiz';
 
 export const Quiz = () => {
-  const [email, setEmail] = useState<string | null>(null);
+  const [email, setEmail] = useState<string>('');
   const { status } = useAppSelector((state) => state.quiz);
 
   const handleEmailChange = (email: string) => {
@@ -19,9 +19,9 @@ export const Quiz = () => {
     <>
       {status === QuizStatus.Start && <CraftingSlide />}
       {status === QuizStatus.Email && (
-        <EmailSlide handleEmailChange={handleEmailChange} email={email}/>
+        <EmailSlide handleEmailChange={handleEmailChange} />
       )}
-      {status === QuizStatus.Diagram && <ProgressSlide />}
+      {status === QuizStatus.Diagram && <ProgressSlide email={email} />}
     </>
   );
 };

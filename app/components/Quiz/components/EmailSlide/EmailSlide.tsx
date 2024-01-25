@@ -10,11 +10,10 @@ import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
 import { QuizStatus } from '@/app/types/TQuiz';
 
 type Props = {
-  email: string | null;
   handleEmailChange: (email: string) => void;
 };
 
-export const EmailSlide: React.FC<Props> = ({ email, handleEmailChange }) => {
+export const EmailSlide: React.FC<Props> = ({ handleEmailChange }) => {
   const dispatch = useAppDispatch();
 
   const formik = useFormik({
@@ -25,7 +24,6 @@ export const EmailSlide: React.FC<Props> = ({ email, handleEmailChange }) => {
       email: Yup.string().email('Invalid email address').required('Required'),
     }),
     onSubmit: () => {
-      console.log('Form submitted with values:', email);
       dispatch(changeStatus(QuizStatus.Diagram));
     },
   });

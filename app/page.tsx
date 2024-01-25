@@ -2,24 +2,26 @@
 
 import { useEffect } from 'react';
 import styles from './page.module.scss';
-import { HomePage } from './components/HomePage/HomePage';
 import { QuizStatus } from './types/TQuiz';
 import { useRouter } from 'next/navigation';
 import { useAppSelector } from './hooks/useTypedSelector';
+import { Quiz } from './components/Quiz/Quiz';
 
 export default function Home() {
   const { status } = useAppSelector((state) => state.quiz);
   const router = useRouter();
 
   useEffect(() => {
-    if (status === QuizStatus.Start) {
-      router.push('/quiz');
+    if (status === QuizStatus.Finished) {
+      router.push('/home');
     }
   }, [status, router]);
 
+  console.log(status);
+
   return (
     <main className={styles.main}>
-      {status === QuizStatus.Finished && <HomePage />}
+      {status !== QuizStatus.Finished && <Quiz />}
     </main>
   );
 }

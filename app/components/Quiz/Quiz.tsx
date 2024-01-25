@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CraftingSlide } from './components/CraftingSlide/CraftingSlide';
-import { EmailSlide } from './components/EmailSlide/EmailSlide';
-import { ProgressSlide } from './components/ProgressSlide/ProgressSlide';
 import { useAppSelector } from '@/app/hooks/useTypedSelector';
 import { QuizStatus } from '@/app/types/TQuiz';
+import { CraftingSlide } from './CraftingSlide/CraftingSlide';
+import { EmailSlide } from './EmailSlide/EmailSlide';
+import { ProgressSlide } from './ProgressSlide/ProgressSlide';
 
 export const Quiz = () => {
   const [email, setEmail] = useState<string>('');

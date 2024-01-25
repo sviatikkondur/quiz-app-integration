@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './crafting.module.scss';
-import Image from 'next/image';
 import { useAppDispatch } from '@/app/hooks/useTypedSelector';
 import { changeStatus } from '@/app/GlobalRedux/features/quiz/quizSlice';
 import { QuizStatus } from '@/app/types/TQuiz';
-import { Icon } from '../Icon/Icon';
 import { steps } from '@/app/utils/data/steps';
+import { Icon } from './Icon/Icon';
 
 export const CraftingSlide = () => {
   const [iconsStatus, setIconsStatus] = useState<{

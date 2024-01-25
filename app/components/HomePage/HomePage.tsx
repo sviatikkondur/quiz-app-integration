@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChoosePlan } from './components/ChoosePlan/ChoosePlan';
-import { Benefits } from './components/Benefits/Benefits';
-import { Stats } from './components/Stats/Stats';
-import { Reviews } from './components/Reviews/Reviews';
+import { ChoosePlan } from './ChoosePlan/ChoosePlan';
+import { Benefits } from './Benefits/Benefits';
+import { Stats } from './Stats/Stats';
+import { Reviews } from './Reviews/Reviews';
 import styles from './home.module.scss';
 
 export const HomePage = () => {

@@ -8,7 +8,7 @@ export interface QuizSlice {
 }
 
 const initialState: QuizSlice = {
-  status: QuizStatus.Finished,
+  status: QuizStatus.Start,
 };
 
 export const quizSlice = createSlice({

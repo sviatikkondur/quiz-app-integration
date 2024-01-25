@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './progress.module.scss';
-import Image from 'next/image';
-import diagram from './icons/diagram.svg';
 import { QuizStatus } from '@/types/TQuiz';
-import { useAppDispatch, useAppSelector } from '@/hooks/useTypedSelector';
+import { useAppDispatch } from '@/hooks/useTypedSelector';
 import { sendQuizResults } from '@/utils/api/api';
 import { changeStatus } from '@/store/features/quiz/quizSlice';
+import { Loader } from '../../Loader/Loader';
 
 type Props = {
   email: string;
 };
 
 export const ProgressSlide: React.FC<Props> = ({ email }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const dispatch = useAppDispatch();
-  const { status } = useAppSelector((state) => state.quiz);
 
   const handleClick = async () => {
-    await sendQuizResults(email);
+    try {
+      setIsLoading(true);
+      await sendQuizResults(email);
 
-    dispatch(changeStatus(QuizStatus.Finished));
+      dispatch(changeStatus(QuizStatus.Finished));
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
+  if (isLoading) {
+    return <Loader />;
+  }
+  
   return (
     <section className={styles.section}>
       <div className={styles.header}>

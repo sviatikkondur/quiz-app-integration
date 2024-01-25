@@ -13,7 +13,7 @@ export const Icon: React.FC<Props> = ({ icon, isIconShown }) => {
         <div
           style={{
             height: '24px',
-            width: '24px',
+            minWidth: '24px',
           }}
         />
       )}

@@ -30,9 +30,10 @@ export const IconWithLoader: React.FC<Props> = ({ icon }) => {
 
       {!isLoading && (
         <Image
-        src={icon}
-        alt='icon'
-      />
+          className='icon'
+          src={icon}
+          alt='icon'
+        />
       )}
     </>
   );

@@ -4,8 +4,9 @@
 }
 
 #loading-bar-spinner.spinner .spinner-icon {
-  width: 21px;
-  height: 21px;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
   border: solid 2px transparent;
   border-top-color: $color-ui-600 !important;
   border-left-color: $color-ui-600 !important;
@@ -26,4 +27,11 @@
 .empty-box {
   width: 24px;
   height: 24px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+
+  object-fit: contain;
 }

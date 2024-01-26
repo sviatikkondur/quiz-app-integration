@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './reviews.module.scss';
 import { reviews } from '@/mockData/reviews';
 import { formatDate } from '@/utils/formatDate';
-import { Stars } from '@/components/Stars/Stars';
+import { Stars } from '@/components/shared/Stars/Stars';
 
 export const Reviews = () => {
   return (

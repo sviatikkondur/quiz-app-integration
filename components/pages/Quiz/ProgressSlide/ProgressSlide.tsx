@@ -3,8 +3,8 @@ import styles from './progress.module.scss';
 import { QuizStatus } from '@/types/TQuiz';
 import { useAppDispatch } from '@/hooks/useTypedSelector';
 import { changeStatus } from '@/store/features/quiz/quizSlice';
-import { Loader } from '../../Loader/Loader';
 import { sendQuizResults } from '../api/api';
+import { Loader } from '@/components/shared/Loader/Loader';
 
 type Props = {
   email: string;
@@ -31,7 +31,7 @@ export const ProgressSlide: React.FC<Props> = ({ email }) => {
   if (isLoading) {
     return <Loader />;
   }
-  
+
   return (
     <section className={styles.section}>
       <div className={styles.header}>

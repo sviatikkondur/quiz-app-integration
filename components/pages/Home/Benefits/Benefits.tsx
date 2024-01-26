@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './benefits.module.scss';
 import Image from 'next/image';
-import checkIcon from '../../../public/icons/сheck.svg';
+import checkIcon from '../../../../public/icons/сheck.svg';
 import { benefits } from '@/mockData/benefits';
 
 export const Benefits = () => {

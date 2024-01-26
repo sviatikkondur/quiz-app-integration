@@ -6,8 +6,8 @@ import { QuizStatus } from '../types/TQuiz';
 import { useRouter } from 'next/navigation';
 import { useAppSelector } from '@/hooks/useTypedSelector';
 import { getProgressValue } from '@/utils/getProgressValue';
-import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
-import { Quiz } from '@/components/Quiz/Quiz';
+import { ProgressBar } from '@/components/shared/ProgressBar/ProgressBar';
+import { Quiz } from '@/components/pages/Quiz/Quiz';
 
 export default function Home() {
   const { status } = useAppSelector((state) => state.quiz);

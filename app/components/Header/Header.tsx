@@ -17,7 +17,7 @@ export const Header = () => {
         />
       </button>
 
-      <p className={styles.logo}>App</p>
+      <h1 className={styles.logo}>App</h1>
 
       <button
         aria-label='Open menu'

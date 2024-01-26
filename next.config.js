@@ -2,9 +2,12 @@
 
 const path = require('path');
 
-module.exports = {
+const nextConfig = {
+  output: 'standalone',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@import "prependStyles.scss";`
   },
-};
+}
+
+module.exports = nextConfig;

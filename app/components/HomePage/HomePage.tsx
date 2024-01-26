@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { ChoosePlan } from './ChoosePlan/ChoosePlan';
 import { Benefits } from './Benefits/Benefits';
 import { Stats } from './Stats/Stats';
@@ -19,7 +19,9 @@ export const HomePage = () => {
     return variants[Math.floor(Math.random() * variants.length)];
   };
 
-  const variant = getUserVariant();
+  const variant = useMemo(() => {
+    return getUserVariant();
+  }, []);
 
   return (
     <section className={styles.section}>

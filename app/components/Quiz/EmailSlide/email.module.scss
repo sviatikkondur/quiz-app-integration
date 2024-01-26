@@ -22,11 +22,11 @@
   flex-direction: column;
   align-items: flex-start;
   gap: $space-sm;
-  
+
   border-radius: 8px;
   border: 2px solid transparent;
-  background: $Color-UI-100;
-  
+  background: $color-ui-100;
+
   padding: $space-sm $space-md;
 
   transition: border-color 0.2s linear;
@@ -52,11 +52,11 @@
 }
 
 .input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px $Color-UI-100 inset !important;
+  -webkit-box-shadow: 0 0 0 30px $color-ui-100 inset !important;
 }
 
 .labelName {
-  color: $Color-Brand-Primary;
+  color: $color-brand-primary;
   font-family: 'Jakarta';
   font-size: 12px;
   font-weight: 600;

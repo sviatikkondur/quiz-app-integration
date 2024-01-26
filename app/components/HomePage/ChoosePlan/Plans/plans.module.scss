@@ -19,14 +19,14 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: $Color-UI-100;
+  background-color: $color-ui-100;
   border-radius: $corner-md;
 
   padding: $space-lg;
 }
 
 .planOptionSelected {
-  border: 2px solid $Color-Brand-Primary;
+  border: 2px solid $color-brand-primary;
 }
 
 .planOptionPopular {
@@ -64,7 +64,7 @@
 }
 
 .popularTagSelected {
-  background-color: $Color-Brand-Primary;
+  background-color: $color-brand-primary;
   border-radius: 4px 4px 0 0;
 }
 
@@ -92,9 +92,9 @@
   display: flex;
   gap: $space-xs;
 
-  background: $Color-UI-200;
-  border-radius: $Corner-sm;
-  border: 1px solid $Color-UI-200;
+  background: $color-ui-200;
+  border-radius: $corner-sm;
+  border: 1px solid $color-ui-200;
   padding: $space-sm;
 }
 

@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Solidgate Test Task</h1>
 
-## Getting Started
+# DEMO
 
-First, run the development server:
+[DEMO LINK](https://solidgate-test-task-quiz.vercel.app/)
+<br />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 🚀 Getting Started
+
+To start the application:
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# ⚡️ Next.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+npm start
+```
 
-## Learn More
+# ⚡️ Docker
 
-To learn more about Next.js, take a look at the following resources:
+```
+docker compose build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+docker compose up
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-## Deploy on Vercel
+# A/B Testing Implementation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Objective
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The objective of this part is to guide the implementation of A/B testing for a specific element on the page, such as changing the color of a Call-to-Action (CTA) button.
+
+## 1. Define the Hypothesis
+
+**Hypothesis:** Changing the color of the CTA button from blue to blue-black will result in a higher click-through rate (CTR) due to increased visibility and user engagement.
+
+## 2. Identify the Element to Test
+
+We are focusing on the CTA button. The specific CSS property to change is the background color.
+
+## 3. Set Up A/B Testing Infrastructure
+
+### 3.1. Variation Creation
+
+Create two variations of the page:
+
+- **Control (A):** The original page with the existing blue CTA button.
+- **Treatment (B):** The variant with the modified blue-black CTA button.
+
+### 3.2. Random Assignment
+
+Randomly assign users to either the control or treatment group.
+
+### 3.3. Data Collection
+
+Implement mechanisms to collect relevant data, such as user interactions (clicks), and any other key performance indicators (KPIs) you want to measure.
+
+## 4. Implementation in Code
+
+Modify the code to incorporate the A/B test variations. This may involve adjusting the CSS styles for the CTA button, implementing logic for random assignment, and logging user interactions.
+
+## 5. Tracking and Analytics
+
+Utilize analytics tools to track and analyze the performance of each variation. Popular tools include Google Analytics, Mixpanel, or custom event tracking. In this project I mocked up it using endpoint which takes the variant of button and incement its click counter in static json file. Shown in presentation video.
+
+### 5.1. Metrics to Track
+
+- **Click-Through Rate (CTR):** The percentage of users who click on the CTA button.
+- **Conversion Rate:** The percentage of users who complete the desired action (e.g., sign up) after clicking the CTA.
+- **Mock** In this project it collects only click counter for both variants. 
+
+## 6. Run the Experiment
+
+Launch the A/B test and allow it to run for a sufficient duration to gather statistically significant data. Avoid making any additional changes to the tested element during this period to ensure the integrity of the results.
+
+## 7. Analyze Results
+
+After the test period, analyze the collected data to determine the performance of each variation. Consider factors such as statistical significance, practical significance, and user feedback.
+
+## 8. Draw Conclusions and Make Decisions
+
+Based on the analysis, draw conclusions about the effectiveness of each variation. Decide whether to implement the change permanently, iterate on the design further, or discard the proposed modification.
+
+## 9. Documentation
+
+Document the results, insights gained, and any actionable next steps. Share this information with relevant stakeholders, including designers, developers, and product managers.
+
+## Conclusion
+
+A/B testing is a valuable technique for making data-driven decisions and optimizing the user experience. Following a systematic approach, defining clear hypotheses, and analyzing results thoroughly contribute to the success of A/B testing efforts.

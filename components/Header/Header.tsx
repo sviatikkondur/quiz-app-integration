@@ -1,6 +1,6 @@
 import React from 'react';
-import backIcon from '../../../public/icons/back.svg';
-import menuIcon from '../../../public/icons/menu.svg';
+import backIcon from '../../public/icons/back.svg';
+import menuIcon from '../../public/icons/menu.svg';
 import Image from 'next/image';
 import styles from './header.module.scss';
 

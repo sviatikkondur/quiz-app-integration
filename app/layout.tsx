@@ -1,9 +1,9 @@
 import '../styles/main.scss';
 import styles from './layout.module.scss';
 import type { Metadata } from 'next';
-import { Header } from './components/Header/Header';
-import { PhoneHeader } from './components/PhoneHeader/PhoneHeader';
 import { Providers } from '@/store/provider';
+import { PhoneHeader } from '@/components/PhoneHeader/PhoneHeader';
+import { Header } from '@/components/Header/Header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

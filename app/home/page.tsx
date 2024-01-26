@@ -3,9 +3,9 @@
 import { useRouter } from 'next/navigation';
 import styles from './page.module.scss';
 import { useEffect } from 'react';
-import { HomePage } from '@/app/components/HomePage/HomePage';
 import { useAppSelector } from '@/hooks/useTypedSelector';
 import { QuizStatus } from '@/types/TQuiz';
+import { HomePage } from '@/components/Home/Home';
 
 export default function Home() {
   const { status } = useAppSelector((state) => state.quiz);

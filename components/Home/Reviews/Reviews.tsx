@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './reviews.module.scss';
-import { Stars } from '@/app/components/Stars/Stars';
 import { reviews } from '@/mockData/reviews';
 import { formatDate } from '@/utils/formatDate';
+import { Stars } from '@/components/Stars/Stars';
 
 export const Reviews = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './button.module.scss';
 import classNames from 'classnames';
-import { sendTestResult } from '@/app/components/HomePage/api/sendTestResult';
+import { sendTestResult } from '../../api/sendTestResult';
 
 type Props = {
   variant: string;

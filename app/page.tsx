@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 import styles from './page.module.scss';
 import { QuizStatus } from '../types/TQuiz';
 import { useRouter } from 'next/navigation';
-import { Quiz } from './components/Quiz/Quiz';
 import { useAppSelector } from '@/hooks/useTypedSelector';
-import { ProgressBar } from './components/ProgressBar/ProgressBar';
 import { getProgressValue } from '@/utils/getProgressValue';
+import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
+import { Quiz } from '@/components/Quiz/Quiz';
 
 export default function Home() {
   const { status } = useAppSelector((state) => state.quiz);

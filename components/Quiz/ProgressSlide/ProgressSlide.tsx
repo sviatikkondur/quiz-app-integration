@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styles from './progress.module.scss';
 import { QuizStatus } from '@/types/TQuiz';
 import { useAppDispatch } from '@/hooks/useTypedSelector';
-import { sendQuizResults } from '@/app/components/Quiz/api/api';
 import { changeStatus } from '@/store/features/quiz/quizSlice';
 import { Loader } from '../../Loader/Loader';
+import { sendQuizResults } from '../api/api';
 
 type Props = {
   email: string;

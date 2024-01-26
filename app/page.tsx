@@ -6,6 +6,8 @@ import { QuizStatus } from '../types/TQuiz';
 import { useRouter } from 'next/navigation';
 import { Quiz } from './components/Quiz/Quiz';
 import { useAppSelector } from '@/hooks/useTypedSelector';
+import { ProgressBar } from './components/ProgressBar/ProgressBar';
+import { getProgressValue } from '@/utils/getProgressValue';
 
 export default function Home() {
   const { status } = useAppSelector((state) => state.quiz);
@@ -17,8 +19,11 @@ export default function Home() {
     }
   }, [status, router]);
 
+  const progressValue = getProgressValue(status);
+
   return (
     <main className={styles.main}>
+      {<ProgressBar value={progressValue} />}
       {status !== QuizStatus.Finished && <Quiz />}
     </main>
   );

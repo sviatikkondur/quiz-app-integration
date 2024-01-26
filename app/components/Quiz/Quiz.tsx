@@ -15,6 +15,7 @@ export const Quiz = () => {
     setEmail(email);
   };
 
+
   return (
     <>
       {status === QuizStatus.Start && <CraftingSlide />}

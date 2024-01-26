@@ -2,7 +2,6 @@ import '../styles/main.scss';
 import styles from './layout.module.scss';
 import type { Metadata } from 'next';
 import { Header } from './components/Header/Header';
-import { ProgressBar } from './components/ProgressBar/ProgressBar';
 import { PhoneHeader } from './components/PhoneHeader/PhoneHeader';
 import { Providers } from '@/store/provider';
 
@@ -25,7 +24,6 @@ export default function RootLayout({
         <Providers>
           {<PhoneHeader />}
           {<Header />}
-          {<ProgressBar />}
           {children}
         </Providers>
       </body>

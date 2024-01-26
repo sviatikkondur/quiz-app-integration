@@ -1,6 +1,7 @@
 .main {
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
+  gap: $space-xl ;
   flex: 1;
-  padding: $space-xl;
+  padding: 0 $space-xl $space-xl;
 }

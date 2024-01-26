@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './crafting.module.scss';
 import { Icon } from './Icon/Icon';
-import { steps } from '@/utils/data/steps';
+import { steps } from '@/mockData/steps';
 import { useAppDispatch } from '@/hooks/useTypedSelector';
 import { changeStatus } from '@/store/features/quiz/quizSlice';
 import { QuizStatus } from '@/types/TQuiz';

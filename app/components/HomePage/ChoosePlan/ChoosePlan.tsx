@@ -1,7 +1,7 @@
 import React, { FormEvent } from 'react';
 import styles from './plan.module.scss';
 import { Plans } from './Plans/Plans';
-import { plans } from '@/utils/data/plans';
+import { plans } from '@/mockData/plans';
 import { Button } from './Button/Button';
 
 type Props = {

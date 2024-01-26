@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './stats.module.scss';
-import { stats } from '@/utils/data/stats';
+import { stats } from '@/mockData/stats';
 
 export const Stats = () => {
   return (

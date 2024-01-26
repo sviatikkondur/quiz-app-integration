@@ -1,8 +1,9 @@
 import React from 'react';
 import { IconWithLoader } from './IconWithLoader/IconWithLoader';
+import { IconType } from '@/types/Step';
 
 type Props = {
-  icon: any;
+  icon: IconType;
   isIconShown: boolean;
 };
 

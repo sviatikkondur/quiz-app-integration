@@ -3,9 +3,10 @@
 import React, { useEffect, useState } from 'react';
 import './icon.scss';
 import Image from 'next/image';
+import { IconType } from '@/types/Step';
 
 type Props = {
-  icon: any;
+  icon: IconType;
 };
 
 export const IconWithLoader: React.FC<Props> = ({ icon }) => {

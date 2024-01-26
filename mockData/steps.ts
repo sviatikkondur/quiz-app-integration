@@ -2,8 +2,9 @@ import goals from './icons/goals.svg';
 import answers from './icons/answers.svg';
 import picking from './icons/picking.svg';
 import finalizing from './icons/finalizing.svg';
+import { Step } from '@/types/Step';
 
-export const steps = [
+export const steps: Step[] = [
   { id: 0, message: 'Aligning with your goals', icon: goals },
   { id: 1, message: 'Reviewing your answers', icon: answers },
   {

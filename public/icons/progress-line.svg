@@ -1,6 +1,1 @@
-<svg width="200" height="200" viewBox="0 0 190 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M94.9281 6.00001C112.329 6.00001 129.35 11.093 143.887 20.6499C158.424 30.2069 169.841 43.8092 176.727 59.7768C183.614 75.7445 185.669 93.378 182.639 110.5C179.608 127.621 171.625 143.481 159.675 156.12C147.725 168.759 132.331 177.623 115.395 181.618C98.4598 185.614 80.7238 184.565 64.378 178.601C48.0322 172.638 33.7927 162.021 23.418 148.062C13.0434 134.103 6.98806 117.413 6 100.053" 
-    stroke="#0CBD68" stroke-width="12" stroke-linecap="round">
-        <animate attributeName="stroke-dashoffset" values="1000;0" dur="2s" repeatCount="1" fill="freeze" />
-    </path>
-</svg>
+<svg width="200" height="200" viewBox="0 0 190 190" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M94.928 6c17.401 0 34.422 5.093 48.959 14.65a89.01 89.01 0 0 1 32.84 39.127 88.938 88.938 0 0 1-17.052 96.343 89.129 89.129 0 0 1-95.297 22.481 89.062 89.062 0 0 1-40.96-30.539A88.956 88.956 0 0 1 6 100.053" stroke="#0CBD68" stroke-width="12" stroke-linecap="round"><animate attributeName="stroke-dashoffset" values="1000;0" dur="2s" repeatCount="1" fill="freeze"/></path></svg>

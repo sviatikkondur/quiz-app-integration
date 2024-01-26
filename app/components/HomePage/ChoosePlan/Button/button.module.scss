@@ -1,0 +1,15 @@
+.cta {
+  @include CTA;
+}
+
+.B {
+  background-color: #222B38;
+
+  &:hover {
+    background-color: #313a48;
+  }
+
+  &:active {
+    background-color: #3a424f;
+  }
+}

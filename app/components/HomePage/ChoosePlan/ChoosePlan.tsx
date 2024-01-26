@@ -2,15 +2,18 @@ import React, { FormEvent } from 'react';
 import styles from './plan.module.scss';
 import { Plans } from './Plans/Plans';
 import { plans } from '@/utils/data/plans';
+import { Button } from './Button/Button';
 
 type Props = {
   selectedPlan: number | null;
   handlePlanChange: (id: number) => void;
+  variant: string;
 };
 
 export const ChoosePlan: React.FC<Props> = ({
   selectedPlan,
   handlePlanChange,
+  variant,
 }) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,12 +33,7 @@ export const ChoosePlan: React.FC<Props> = ({
           selectedPlan={selectedPlan}
         />
 
-        <button
-          className={styles.cta}
-          type='submit'
-        >
-          Get my plan
-        </button>
+        <Button variant={variant} />
 
         <p className={styles.planDetails}>
           You are enrolling in a 3-monthly subscription to

@@ -8,10 +8,6 @@
   @include subtitle;
 }
 
-.cta {
-  @include CTA;
-}
-
 .planDetails {
   color: $Color-UI-400;
   text-align: center;

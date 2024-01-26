@@ -14,11 +14,19 @@ export const HomePage = () => {
     setSelectedPlan(planId);
   };
 
+  const getUserVariant = () => {
+    const variants = ['A', 'B'];
+    return variants[Math.floor(Math.random() * variants.length)];
+  };
+
+  const variant = getUserVariant();
+
   return (
     <section className={styles.section}>
       <ChoosePlan
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}
+        variant={variant}
       />
 
       <Benefits />
@@ -30,6 +38,7 @@ export const HomePage = () => {
       <ChoosePlan
         selectedPlan={selectedPlan}
         handlePlanChange={handlePlanChange}
+        variant={variant}
       />
     </section>
   );

@@ -1,4 +1,4 @@
-<h1 align="center">Solidgate Test Task</h1>
+<h1 align="center">Landing with Marketing Quiz Integration</h1>
 
 # DEMO
 
